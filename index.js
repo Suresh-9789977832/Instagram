@@ -6,12 +6,11 @@ const cors = require("cors")
 const router = require("./Routes/UserRouter")
 const postrouter = require('./Routes/PostRouter')
 const mongoose = require("mongoose")
-
+const PORT=process.env.PORT
 
     app.use(cors({
         credentials: true,
         origin: 'http://localhost:5174'
-        
     }))
 
 mongoose.connect(`${process.env.DB_URL}/${process.env.DB_NAME}`)
@@ -29,4 +28,4 @@ app.use('/post',postrouter)
 // })
 
 
-app.listen(process.env.PORT,()=>console.log(`app is running in port ${process.env.PORT}`))
+app.listen(PORT,()=>console.log(`app is running in port ${PORT}`))
