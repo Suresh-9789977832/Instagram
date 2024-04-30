@@ -10,7 +10,7 @@ const PORT=process.env.PORT
 
     app.use(cors({
         credentials: true,
-        origin: 'http://localhost:5174'
+        origin: 'http://localhost:5173'
     }))
 
 mongoose.connect(`${process.env.DB_URL}/${process.env.DB_NAME}`)
