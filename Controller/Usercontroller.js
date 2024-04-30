@@ -1,6 +1,6 @@
 const {hashedpassword, comparepassword, createtoken}=require("../Helper/helper")
 const Postmodal = require("../Modal/Postmodal")
-var Usermodal = require("../Modal/Usermodal")
+var Usermodal = require("../Modal/Usermodal");
 const jwt = require("jsonwebtoken")
 const extpath = require("path")
 const fs=require("fs")

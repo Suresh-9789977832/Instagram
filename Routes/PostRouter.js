@@ -1,7 +1,7 @@
 const express = require("express")
 const { createpost,getalluserposts, upload } = require("../Controller/Postcontroller")
 const router = express.Router()
-const multer=require("multer")
+const multer = require("multer");
 
 const photomiddleware = multer({ dest: "uploads" })
 

@@ -1,4 +1,4 @@
-const bcryptjs = require("bcryptjs")
+const bcryptjs = require("bcryptjs");
 const saltround = 10
 const jwt=require("jsonwebtoken")
 

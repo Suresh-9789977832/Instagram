@@ -1,7 +1,7 @@
 const Postmodal = require("../Modal/Postmodal")
 const jwt = require("jsonwebtoken")
 const extpath = require("path")
-const fs=require("fs")
+const fs = require("fs");
 const Usermodal = require("../Modal/Usermodal")
 
 const createpost =async (req,res)=>{
