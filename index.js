@@ -23,9 +23,9 @@ app.use('/user', router)
 app.use('/post',postrouter)
 
 
-// app.get('/', (req, res) => {
-//     res.json('hello world')
-// })
+app.get('/', (req, res) => {
+    res.json('hello world')
+})
 
 
 app.listen(PORT,()=>console.log(`app is running in port ${PORT}`))
