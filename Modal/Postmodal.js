@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require("mongoose")
 
 const Postschema = new mongoose.Schema({
     owner: { type: mongoose.Schema.Types.ObjectId, ref: "Usermodal", required: true },

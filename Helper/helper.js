@@ -1,6 +1,6 @@
 const bcryptjs = require("bcryptjs");
 const saltround = 10
-const jwt=require("jsonwebtoken")
+const jwt = require("jsonwebtoken");
 
 
 const hashedpassword = async (password) => {

@@ -3,7 +3,7 @@ const Postmodal = require("../Modal/Postmodal")
 var Usermodal = require("../Modal/Usermodal");
 const jwt = require("jsonwebtoken")
 const extpath = require("path")
-const fs=require("fs")
+const fs = require("fs");
 
 const registeruser = async (req, res) => {
   

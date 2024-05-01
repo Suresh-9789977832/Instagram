@@ -1,6 +1,6 @@
 const express = require("express")
 const multer = require("multer");
-const router = express.Router()
+const router = express.Router();
 
 
 const singlemiddle = multer({ dest: "uploads" })

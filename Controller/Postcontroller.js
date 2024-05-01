@@ -1,6 +1,6 @@
 const Postmodal = require("../Modal/Postmodal")
 const jwt = require("jsonwebtoken")
-const extpath = require("path")
+const extpath = require("path");
 const fs = require("fs");
 const Usermodal = require("../Modal/Usermodal")
 
