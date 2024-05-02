@@ -15,12 +15,22 @@ const PORT=process.env.PORT
 
 mongoose.connect(`${process.env.DB_URL}/${process.env.DB_NAME}`)
 
+app.use(express.static('public'));
+app.use((req, res, next) => {
+    if (req.url.endsWith('.js')) {
+      res.setHeader('Content-Type', 'application/javascript');
+    }
+    next();
+  });
+
 app.use('/uploads', express.static(__dirname + '/uploads'))
+
 
 
 app.use(express.json())
 app.use('/user', router)
 app.use('/post',postrouter)
+
 
 
 app.get('/', (req, res) => {
