@@ -22,12 +22,11 @@ router.patch('/followinguser/:token/:id', followinguser)
 
 router.get('/getfollowedusers/:token', getfollowedusers)
 
-
 router.patch('/unfollowuser/:token/:id', unfollowuser)  
 
 router.get('/:id', getuserbyid)
 
-router.post('/singleupload/:token',upload.single('file'),uploadfile)
+router.post('/singleupload/:token',uploadfile)
 
 
 

@@ -297,7 +297,7 @@ const uploadfile = (req, res) => {
 
     try {
         let token = req.params.token
-        const { path, originalname } = req.file
+        let final=req.body.final
         if (token) {
             jwt.verify(token, process.env.SECRET_CODE, async (err, data) => {
                 if (err) {
@@ -306,10 +306,7 @@ const uploadfile = (req, res) => {
                         })
                 }
                 if (data) {
-                     const ext = extpath.extname(originalname)
-                     const newpath = path + ext
-                    fs.renameSync(path, newpath)
-                    await Usermodal.findByIdAndUpdate(data.id, { profilepicurl: newpath })
+                    await Usermodal.findByIdAndUpdate(data.id, { profilepicurl: final })
                     let newuser=await Usermodal.findById({_id:data.id})
                     res.status(200).send({
                         message: "Profile updated successfully",
